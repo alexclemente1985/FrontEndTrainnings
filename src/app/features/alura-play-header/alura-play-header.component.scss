@@ -1,0 +1,99 @@
+.cabecalho__container{
+
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    padding: 0 25px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+
+    .cabecalho__pesquisar__item{
+        display: none;
+        .pesquisar__input {
+            width: 260px;
+            height: 32px;
+            border: 1px solid rgb(211, 211, 211);
+            font-size: 16px;
+            padding: 3px 8px;
+            border: 1px solid rgb(211, 211, 211);
+        }
+        
+        .pesquisar__label {
+            background-image: url(../../../assets/images/cabecalho/search.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid rgb(211, 211, 211);
+            background-color: #F9F9F9;
+            border-left: none;
+            padding: 8px 18px 5px;
+            cursor: pointer;
+        }
+
+        .cabecalho__audio {
+            background-image: url(../../../assets/images/cabecalho/mic.png);
+            padding: 20px;
+            display: none;
+        }
+
+        @media (min-width: 834px) {
+           display: block;
+        }
+
+    }
+
+    
+
+    .logo__item {
+        background-image: url(../../../assets/images/cabecalho/Logo.png);
+        background-repeat: no-repeat;
+        padding: 15px 65px;
+        cursor: pointer;
+    }
+
+    
+
+    .cabecalho__icones__item{
+        .cabecalho__videos {
+            background-image: url(../../../assets/images/cabecalho/video_call.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px;
+        }
+        
+        .cabecalho__apps {
+            background-image: url(../../../assets/images/cabecalho/apps.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 13px 30px 13px 13px;
+        }
+        
+        .cabecalho__notificacoes {
+            background-image: url(../../../assets/images/cabecalho/notifications.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 13px 30px 13px 13px;
+        }
+        
+        .cabecalho__avatar {
+            background-image: url(../../../assets/images/cabecalho/Avatar.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 13px 30px 13px 13px;
+        }
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+

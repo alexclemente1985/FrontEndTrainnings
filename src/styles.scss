@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './stylesheets/reset.scss';
+
+*,
+*::before,
+*::after {
+    --azul-escuro: #154580;
+    --azul-medio: #3970BE;
+    --azul-claro: #E5F1FF;
+    --cinza-texto: #444444;
+    --cinza-claro: #ECECEC;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: var(--azul-claro);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+
+    @media(min-width: 834px) {
+        height: 100vh;
+    }
+}
+
+
+@media(min-width: 834px) {
+
+   /*  body {
+        height: 100vh;
+    } */
+
+    /* ESTILOS DO MENU LATERAL */
+
+    /* .menu__container {
+        font-size: 16px;
+    }
+
+    .menu__lista {
+        padding-top: 15px;
+    }
+
+    .menu__lista li {
+        width: 100%;
+    } */
+
+    /* ESTILOS DA SECAO SUPERIOR */
+
+    /* .superior__secao__container {
+        border-top: var(--azul-medio) 1px solid;
+        border-bottom: var(--azul-medio) 1px solid;
+        width: auto;
+        left: 82px;
+    } */
+
+    /*ESTILOS SEÇÃO VÍDEOS */
+
+    /* .videos__container {
+        padding-left: 90px;
+        padding-right: 17px;
+    }
+
+    .videos__item:hover {
+        transform: scale(1.3);
+    } */
+
+    /* ESTILOS RODAPÉ */
+
+   /*  .rodape__container {
+        height: 420px;
+        padding-left: 74px;
+    } */
+
+}
+
+@media(min-width: 1440px) {
+
+    /* SEÇÃO SUPERIOR */
+
+   /*  .superior__secao__container {
+        left: 247px;
+    } */
+
+    /* ESTILOS DO MENU LATERAL */
+
+    /* .menu__lista {
+        border-bottom: 1.5px solid var(--azul-medio);
+    } */
+
+    /* ESTILOS VIDEOS */
+
+   /*  .videos__container {
+        padding-right: 10px;
+        padding-left: 248px;
+    }
+ */
+    /* ESTILOS RODAPÉ */
+
+    /* .rodape__container {
+        padding-left: 240px;
+        height: 225px;
+    } */
+
+}
