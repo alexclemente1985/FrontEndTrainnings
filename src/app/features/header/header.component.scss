@@ -1,0 +1,74 @@
+.cabecalho{
+    align-items: center;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    /* relative: usado para liberar o position absolute do lista-menu 
+    e descer a lista na medida de 100% do header */
+    position: relative;
+    
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .container__botao{
+            /* esconde o checkbox, simulando que o check é o próprio menu */
+            display: none;
+        }
+
+        /* se botão estiver checked, vai procurar componente com classe lista-menu e altera o display */
+        .container__botao:checked~.lista-menu{
+            display: block;
+        }
+        .material-icons{
+            color: var(--cor-tema-1);
+            font-size: 48px ;
+        }
+
+        .lista-menu{
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 60vw;
+
+            .lista-menu__titulo, 
+            .lista-menu__item{
+                padding: 1em;
+                background-color: var(--branco);
+            }
+
+            .lista-menu__titulo{
+                color: var(--cor-laranja);
+                font-weight: 700;
+            }
+
+            .lista-menu__link{
+                background: var(--cor-azul-degrade);
+                /* webkit: permite funcionar em determinados navegadores */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                /* define que a cor do background só vai existir onde tiver texto */
+                background-clip: text;
+                text-transform: uppercase;
+            }
+        }
+
+        .container__imagem{
+            padding: 1em;
+        }
+
+        
+    }
+
+    
+}
+
+.cabecalho__menu-hamburguer{
+   
+    
+    background-image: url("../../../assets/images/svg/menu.svg");
+    display: inline-block;
+    
+}

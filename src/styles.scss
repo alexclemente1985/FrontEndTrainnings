@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import './stylesheets/reset.scss';
+@import './stylesheets/variables.scss';
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1 {
+    background-color: white;
+}
