@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './features/header/header.module';
 import { BannerModule } from './features/banner/banner.module';
+import { CarrosselComponent } from './features/carrossel/carrossel.component';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,11 @@ import { BannerModule } from './features/banner/banner.module';
   imports: [
     BrowserModule,
     HeaderModule,
-    BannerModule
+    BannerModule,
+    CarrosselComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
