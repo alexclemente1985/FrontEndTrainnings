@@ -1,11 +1,12 @@
 <section class="carrossel">
     <h2 class="carrossel__titulo">Novos lançamentos</h2>
 
-    <swiper-container init="false">
+    <swiper-container id="book-swiper" init="false" navigation="true" pagination="true">
+     
+        <swiper-slide *ngFor="let slider of imgSliders">
+          <img [src]="slider.src" [alt]="slider.alt"/>
+        </swiper-slide>
         
-        <swiper-slide *ngFor="let slider of sliders">{{slider}}</swiper-slide>
-    
-        ...
       </swiper-container>
     <!--   <button>Update</button> -->
       <button>Slide Next</button>
