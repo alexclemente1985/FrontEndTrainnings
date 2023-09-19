@@ -1,18 +1,45 @@
-.carrossel__titulo {
-    color: var(--cor-laranja);
-    background-color: var(--branco);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 1em 0 0.5em 0;
+.carrossel{
+    .carrossel__titulo {
+        color: var(--cor-laranja);
+        background-color: var(--branco);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 1em 0 0.5em 0;
+    }
 
-    
+    @media screen and (min-width: 1024px) {
+            .carrossel__titulo{
+                font-size: 26px;
+            }
 
-   
+            swiper-container::part(container){
+                padding-top: 5em;
+                width: 60%;
+            }
 
-    
+            swiper-container::part(pagination){
+                position: absolute;
+                margin: 2em 0 3em 0;
+                top: 0em;
+            }
+
+            swiper-container::part(button-prev){
+                display: block;
+                top: 60%;
+                z-index: 1000;
+            }
+            
+            swiper-container::part(button-next){
+                display: block;
+                top: 60%;
+                z-index: 1000;
+            }
+    }
 }
+
+
 
 /* .slide-img{
     width: 100% !important;

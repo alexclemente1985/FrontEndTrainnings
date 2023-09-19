@@ -26,6 +26,13 @@ export class CarrosselComponent {
 
   slider!: HTMLElement | null;
 
+  buttonPrev!: HTMLElement | null;
+  flagButtonPrev!: boolean;
+  buttonNext!: HTMLElement | null | Element;
+  flagButtonNext!: boolean;
+
+  swiperEl!: HTMLElement | null;
+
   sliders: string[] = [
     'Test 1',
     'Test 2',
@@ -96,16 +103,39 @@ export class CarrosselComponent {
     this.slider = document.getElementById('book-swiper');
     //this.setBannerImgs(); //imagens não permitem ajustes dessa maneira
   }
+  ngDoCheck(){
+    if(!this.buttonNext && !this.flagButtonNext){
+      this.buttonNext = document.querySelector('swiper-button-next');
+      console.log('eita kct 1!!', this.swiperEl, this.buttonNext)
+      if(this.swiperEl && this.buttonNext){
+        this.buttonNext.addEventListener('click', () => {
+          console.log('eita kct 2!!', this.swiperEl, this.buttonNext)
+          //@ts-ignore
+          this.swiperEl.swiper.slideNext();
+          this.flagButtonNext = true;
+        }) 
+      }
+    }
+  }
   ngAfterViewInit(){
     //this.setBannerImgStyles();
-    const swiperEl = document.querySelector('swiper-container');
+    this.swiperEl = document.querySelector('swiper-container');
     const buttonEl = document.querySelector('button');
+
+    /* const buttonPrev = document.querySelector('.swiper-button-prev');
+    const buttonNext = document.querySelector('.swiper-button-next'); */
 
   // swiper parameters
   const swiperParams = {
     slidesPerView: 3,
     spaceBetween: 40,
     modules: [Navigation, Pagination],
+    observer: true,
+    observeParents: true,
+    /* navigation: {
+      nextEl: ".swiper .swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }, */
     /* pagination: {
       //el: ".swiper-pagination",
      // dynamicBullets: true,
@@ -135,12 +165,12 @@ export class CarrosselComponent {
   };
 
   // now we need to assign all parameters to Swiper element
-  if(swiperEl){
-    Object.assign(swiperEl, swiperParams);
+  if(this.swiperEl){
+    Object.assign(this.swiperEl, swiperParams);
 
     // and now initialize it
     // @ts-ignore
-    swiperEl.initialize();
+    this.swiperEl.initialize();
     if(buttonEl){
       buttonEl.addEventListener('click', () => {
         // if it was initialized with attributes
@@ -150,9 +180,22 @@ export class CarrosselComponent {
         //@ts-ignore
        // swiperEl.slidesPerView = 3;
 
-       swiperEl.swiper.slideNext();
+       this.swiperEl.swiper.slideNext();
       });
     }
+    /* if(buttonPrev ){
+      buttonPrev.addEventListener('click', () => {
+        //@ts-ignore
+        swiperEl.swiper.slidePrev();
+      });
+      
+    }
+    if(buttonNext){
+      buttonNext.addEventListener('click', () => {
+        //@ts-ignore
+        swiperEl.swiper.slideNext();
+      }) 
+    }*/
   }
   
   }

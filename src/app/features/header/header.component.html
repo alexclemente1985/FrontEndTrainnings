@@ -2,7 +2,7 @@
     <div class="container">
         <input type="checkbox" id="menu" class="container__botao">
         <label for="menu">
-            <span class="material-icons">menu</span>
+            <span class="material-icons cabecalho__menu-hamburguer">menu</span>
         </label>
         <ul class="lista-menu">
             <li class="lista-menu__titulo">Categorias</li>
@@ -24,9 +24,43 @@
         </ul>
         
         <img class="container__imagem" src="../../../assets/images/svg/Logo.svg" alt="Logo da Alurabooks">
+        <h1 class="container__titulo">
+            <b class="container__titulo--negrito">Alura</b>Books
+        </h1>
     </div>
+
+    <ul class="opcoes">
+        <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
+        <label for="opcoes-menu">
+            <li class="opcoes__item">Categorias</li>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Programação</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Front-end</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Infraestrutura</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Business</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Design & UX</a>
+            </li>
+        </ul>
+        
+        <li class="opcoes__item">
+            <a href="#" class="opcoes__link">Favoritos</a>
+        </li>
+        <li class="opcoes__item">
+            <a href="#" class="opcoes__link">Minha Estante</a>
+        </li>
+    </ul>
     <div class="container">
-        <a href="#"><img class="container__imagem" src="../../../assets/images/svg/heart.svg" alt="Meus Favoritos"></a>
+        <a href="#"><img class="container__imagem container__imagem-transparente" src="../../../assets/images/svg/heart.svg" alt="Meus Favoritos"></a>
         <a href="#"><img class="container__imagem" src="../../../assets/images/svg/bag.svg" alt="Carrinhos de Compras"></a>
         <a href="#"><img class="container__imagem" src="../../../assets/images/svg/person.svg" alt="Meu Perfil"></a>
     </div>

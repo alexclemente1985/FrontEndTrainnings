@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './features/header/header.module';
 import { BannerModule } from './features/banner/banner.module';
 import { CarrosselComponent } from './features/carrossel/carrossel.component';
+import { CardModule } from './features/card/card.module';
+import { TopicsModule } from './features/topics/topics.module';
+import { ContactModule } from './features/contact/contact.module';
+import { FooterModule } from './features/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { CarrosselComponent } from './features/carrossel/carrossel.component';
     BrowserModule,
     HeaderModule,
     BannerModule,
-    CarrosselComponent
+    CarrosselComponent,
+    CardModule,
+    TopicsModule,
+    ContactModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
