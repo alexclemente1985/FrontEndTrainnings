@@ -1,4 +1,31 @@
 <hr/>
 <footer class="rodape">
     <h2 class="rodape__titulo">Grupo Alura</h2>
+    <ul class="lista-rodape">
+        <li class="lista-rodape__titulo">Educação</li>
+        <ng-container *ngFor="let link of linksEducacao">
+            <li class="lista-rodape__item">
+                <img [src]="link.src" [alt]="link.alt">
+                <a href="#" class="lista-rodape__link">{{link.name}}</a>
+            </li>
+        </ng-container>
+    </ul>
+    <ul class="lista-rodape">
+        <li class="lista-rodape__titulo">Educação Online</li>
+        <ng-container *ngFor="let link of linksEdOnline">
+            <li class="lista-rodape__item">
+                <img [src]="link.src" [alt]="link.alt">
+                <a href="#" class="lista-rodape__link">{{link.name}}</a>
+            </li>
+        </ng-container>
+    </ul>
+    <ul class="lista-rodape">
+        <li class="lista-rodape__titulo">Comunidade</li>
+        <ng-container *ngFor="let link of linksComunidade">
+            <li class="lista-rodape__item">
+                <img [src]="link.src" [alt]="link.alt">
+                <a href="#" class="lista-rodape__link">{{link.name}}</a>
+            </li>
+        </ng-container>
+    </ul>
 </footer>

@@ -3,7 +3,7 @@
     padding: 1em;
 
     .contato__titulo,
-      .contato__descricao {
+      .contato__texto {
         background: var(--cor-azul-degrade);
         /* pega a cor do background e passa para o texto... importante para passar degrade para texto */
         background-clip: text;
@@ -16,7 +16,7 @@
         font-weight: 500;
     }
 
-        .contato__descricao {
+      .contato__texto {
         font-weight: 300;
         margin: 1em 0em;
     }
@@ -49,10 +49,22 @@
     .contato__descricao {
       margin-right: 1em;
       width: 30%;
+
+      .contato__titulo {
+        font-size: 24px;
+      }
+
+      .contato__texto {
+
+      }
     }
 
-    .contato__titulo {
-      font-size: 24px;
-    }
+    
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .contato{
+    padding: 3em 20vw;
   }
 }

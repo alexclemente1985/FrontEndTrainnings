@@ -106,10 +106,8 @@ export class CarrosselComponent {
   ngDoCheck(){
     if(!this.buttonNext && !this.flagButtonNext){
       this.buttonNext = document.querySelector('swiper-button-next');
-      console.log('eita kct 1!!', this.swiperEl, this.buttonNext)
       if(this.swiperEl && this.buttonNext){
         this.buttonNext.addEventListener('click', () => {
-          console.log('eita kct 2!!', this.swiperEl, this.buttonNext)
           //@ts-ignore
           this.swiperEl.swiper.slideNext();
           this.flagButtonNext = true;

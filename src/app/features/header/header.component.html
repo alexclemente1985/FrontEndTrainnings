@@ -1,7 +1,7 @@
 <header class="cabecalho">
     <div class="container">
         <input type="checkbox" id="menu" class="container__botao">
-        <label for="menu">
+        <label for="menu" class="container__rotulo">
             <span class="material-icons cabecalho__menu-hamburguer">menu</span>
         </label>
         <ul class="lista-menu">
@@ -31,7 +31,7 @@
 
     <ul class="opcoes">
         <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
-        <label for="opcoes-menu">
+        <label for="opcoes-menu" class="opcoes__rotulo">
             <li class="opcoes__item">Categorias</li>
         </label>
         <ul class="lista-menu">
@@ -60,8 +60,16 @@
         </li>
     </ul>
     <div class="container">
-        <a href="#"><img class="container__imagem container__imagem-transparente" src="../../../assets/images/svg/heart.svg" alt="Meus Favoritos"></a>
-        <a href="#"><img class="container__imagem" src="../../../assets/images/svg/bag.svg" alt="Carrinhos de Compras"></a>
-        <a href="#"><img class="container__imagem" src="../../../assets/images/svg/person.svg" alt="Meu Perfil"></a>
+        <a href="#">
+            <img class="container__imagem container__imagem-transparente" src="../../../assets/images/svg/heart.svg" alt="Meus Favoritos">
+        </a>
+        <a href="#" class="container__link">
+            <img class="container__imagem" src="../../../assets/images/svg/bag.svg" alt="Carrinhos de Compras">
+            <p class="container__texto">Minha sacola</p>
+        </a>
+        <a href="#" class="container__link">
+            <img class="container__imagem" src="../../../assets/images/svg/person.svg" alt="Meu Perfil">
+            <p class="container__texto">Meu Perfil</p>
+        </a>
     </div>
 </header>

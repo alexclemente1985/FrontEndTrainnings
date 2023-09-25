@@ -18,6 +18,15 @@
             display: none;
         }
 
+        .container__botao:checked~.container__rotulo > .cabecalho__menu-hamburguer {
+            color: var(--branco);
+            //background-color: var(--cor-azul-degrade);
+        }
+
+        .container__botao:checked~.container__rotulo {
+            background-color: var(--cor-tema-1);
+        }
+
         /* se botão estiver checked, vai procurar componente com classe lista-menu e altera o display */
         .container__botao:checked~.lista-menu{
             display: block;
@@ -40,6 +49,10 @@
         .container__titulo{
             display: none;
          }
+
+        .container__texto {
+            display: none;
+        }
 
         
     }
@@ -110,7 +123,7 @@
         display: flex;
 
         .opcoes__item{
-            padding: 0 1em;
+            padding: 2em 1em;//0 1em;
             text-transform: uppercase;
 
             .opcoes__link{
@@ -127,9 +140,51 @@
         .opcoes__botao{
             display: none;
         }
+
+        .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item{
+            background-color: var(--cor-tema-1);
+            color: var(--branco);
+        }
+   }
+   .lista-menu{
+    .lista-menu__item:hover{
+        background: var(--cor-tema-1);
+
+       
+        
     }
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        //color: var(--branco);
+    }
+   }
 }
 
+    
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho{
+        padding: 0 2em;
+        .container{
+            .container__link{
+                align-items: center;
+                display: flex;
+                color: var(--cor-preto);
+
+                .container__texto {
+                    display: block;
+                }
+            }
+    
+            
+        }
+        
+
+        .opcoes{
+            margin-right: auto;
+        }
+    }
     
 }
 
